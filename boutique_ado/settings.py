@@ -29,6 +29,12 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-vladaalek-boutiquecodei-0lwkbxsfsdh.ws-eu116.gitpod.io']
 
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-vladaalek-boutiquecodei-0lwkbxsfsdh.ws-eu116.gitpod.io',  # Your Gitpod URL
+]
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -80,6 +86,8 @@ TEMPLATES = [
         },
     },
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 
 AUTHENTICATION_BACKENDS = (
